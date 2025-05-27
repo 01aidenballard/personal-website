@@ -30,6 +30,25 @@ function Home() {
         </p>
       </section>
 
+      {/* Skills */}
+      <section className="space-y-4 border-t pt-6">
+        <h2 className="text-2xl font-semibold">Skills</h2>
+        <ul className="space-y-4 text-gray-700">
+          <li>
+            <h3 className="italic text-lg">Programming Languages</h3>
+            <p className="text-sm ml-4">Java, Python, C/C++, HTML, CSS, JavaScript, SQL, VHDL</p>
+          </li>
+          <li>
+            <h3 className="italic text-lg">Tools and Frameworks</h3>
+            <p className="text-sm ml-4">Git/GitHub, React, TailwindCSS, ROS2, Eclipse, VSCode, Microsoft Office, Google Suite, Quartus Prime</p>
+          </li>
+          <li>
+            <h3 className="italic text-lg">Operating Systems</h3>
+            <p className="text-sm ml-4">Windows (10/11), Ubuntu (22.04+), Raspbian, Debian, Kali</p>
+          </li>
+        </ul>
+      </section>
+  
       {/* Reading List */}
       <section className="space-y-4 border-t pt-6">
         <h2 className="text-2xl font-semibold">Reading List</h2>
@@ -62,25 +81,6 @@ function Home() {
             <p className="text-gray-700 italic">
               <i>Lord of the Mysteries</i>, the rest of the Stormlight Archive, Jeff Smith's <i>Bone</i>, and finally finishing <i>The Hobbit</i>
             </p>
-          </li>
-        </ul>
-      </section>
-
-      {/* Skills */}
-      <section className="space-y-4 border-t pt-6">
-        <h2 className="text-2xl font-semibold">Skills</h2>
-        <ul className="space-y-4 text-gray-700">
-          <li>
-            <h3 className="italic text-lg">Programming Languages</h3>
-            <p className="text-sm ml-4">Java, Python, C/C++, HTML, CSS, JavaScript, SQL, VHDL</p>
-          </li>
-          <li>
-            <h3 className="italic text-lg">Tools and Frameworks</h3>
-            <p className="text-sm ml-4">Git/GitHub, React, TailwindCSS, ROS2, Eclipse, VSCode, Microsoft Office, Google Suite, Quartus Prime</p>
-          </li>
-          <li>
-            <h3 className="italic text-lg">Operating Systems</h3>
-            <p className="text-sm ml-4">Windows (10/11), Ubuntu (22.04+), Raspbian, Debian, Kali</p>
           </li>
         </ul>
       </section>
