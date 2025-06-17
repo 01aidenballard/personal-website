@@ -1,93 +1,109 @@
 import headshot from "../assets/aiden_mountain.jpg";
 
 function Home() {
-  return (
-    <div className="md:grid grid-cols-2">
-      <div className="mx-auto p-6 space-y-10">
-        {/* Intro Section */}
-        <div className="flex flex-col items-center text-center">
-          <h1 className="text-4xl font-bold mb-4">Hi, I'm Aiden Ballard</h1>
-          <img
-            className="object-cover object-center rounded-full h-150 w-150 mb-4 shadow-md"
-            src={headshot}
-            alt="Headshot of Aiden Ballard at Cooper's Rock"
-          />
-          <p className="text-xl text-gray-600">Aspiring Software Engineer</p>
-        </div>
-      </div>
-      <div>
-          {/* About Me */}
-          <section className="space-y-2">
-            <h2 className="text-2xl font-semibold">About Me</h2>
-            <p className="text-md leading-relaxed text-gray-700">
-              I am currently a Junior at West Virginia University studying Computer Science with a strong interest in software engineering and embedded systems. 
-              As an undergraduate research assistant, I collaborated with Mechanical and Aerospace Engineering students to produce autonomous, target-tracking,  
-              lighter-than-air drones (blimps, to the layman) for competition. I led the Vision subteam, where I focused on real-time object detection.
-              I also contributed to a published research paper on embedded artificial intelligence, which detailed the creation of an AI Ambassador for West Virginia University's 
-              Lane Department of Computer Science and Electrical Engineering (LCSEE). Feel free to check out these projects and more in my portfolio!
-            </p>
-            <p className="text-md leading-relaxed text-gray-700">
-              Outside of programming, I love reading, gaming, and playing Ultimate Frisbee, a passion that has led me to serve as Vice President, Captain, and now President of WV Wild, 
-              our university’s competitive Ultimate team.
-            </p>
-          </section>
+  const skills = {
+    languages: ["Java", "Python", "C/C++", "HTML", "CSS", "JavaScript", "SQL", "VHDL"],
+    tools: ["Technical Writing", "Git/GitHub", "React", "TailwindCSS", "ROS2", "Eclipse", "VSCode", "Microsoft Office", "Google Suite", "Quartus Prime", "NodeJS", "ExpressJS"],
+    os: ["Windows", "Ubuntu", "Raspbian", "Debian", "Kali"]
+  };
 
-          {/* Skills */}
-          <section className="space-y-4 border-t pt-2">
-            <h2 className="text-2xl font-semibold">Skills</h2>
-            <ul className="space-y-2 text-gray-700">
-              <li>
-                <h3 className="italic text-lg">Programming Languages</h3>
-                <p className="text-sm ml-4">Java, Python, C/C++, HTML, CSS, JavaScript, SQL, VHDL</p>
-              </li>
-              <li>
-                <h3 className="italic text-lg">Tools and Frameworks</h3>
-                <p className="text-sm ml-4">Technical documentation and writing, Git/GitHub, React, TailwindCSS, ROS2, Eclipse, VSCode, Microsoft Office(PowerPoint, Word, Excel), Google Suite(Slides, Docs, Sheets), Quartus Prime, NodeJS, ExpressJS</p>
-              </li>
-              <li>
-                <h3 className="italic text-lg">Operating Systems</h3>
-                <p className="text-sm ml-4">Windows, Ubuntu, Raspbian, Debian, Kali</p>
-              </li>
-            </ul>
-          </section>
-      
-          {/* Reading List */}
-          <section className="space-y-4 border-t pt-2">
-            <h2 className="text-2xl font-semibold">Reading List</h2>
-            <ul className="space-y-4">
-              <li>
-                <h3 className="text-xl font-medium">
-                  Brandon Sanderson's <i>The Way of Kings</i>
-                </h3>
-                <p className="text-gray-700">
-                  I have been trying to get into the Cosmere Universe for a long time and I finally found an available copy at my local bookstore. 
-                  Excited to finish this and move on through the rest of the Stormlight Archive. Kaladin is definitely the most entertaining character of the first 200 pages.
+  const SkillBadge = ({ skill }) => (
+    <span className="inline-block bg-indigo-100 text-indigo-800 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">
+      {skill}
+    </span>
+  );
+
+  return (
+    <div className="min-h-screen bg-slate-50">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+
+          {/* Left Column / Intro */}
+          <div className="lg:col-span-2 flex flex-col items-center text-center space-y-6">
+            <div className="relative">
+              <img
+                className="rounded-full h-100 w-100 object-cover object-center shadow-xl ring-4 ring-white"
+                src={headshot}
+                alt="Headshot of Aiden Ballard at Cooper's Rock"
+              />
+            </div>
+            <div className="flex flex-col items-center">
+              <h1 className="text-4xl font-bold text-slate-800">Hi, I'm Aiden Ballard</h1>
+              <p className="text-xl text-indigo-600 font-medium mt-2">Aspiring Software Engineer</p>
+            </div>
+          </div>
+
+          {/* Right Column / Content (Spans 3 columns on large screens) */}
+          <div className="lg:col-span-3 bg-white rounded-lg shadow-xl border border-slate-200">
+            {/* About Me */}
+            <section className="p-8">
+              <h2 className="text-3xl font-bold text-slate-800 mb-4">About Me</h2>
+              <div className="space-y-4 text-slate-700 leading-relaxed">
+                <p>
+                  I am a Junior at West Virginia University studying Computer Science with a strong interest in software engineering and embedded systems. As an undergraduate research assistant, I collaborated with Mechanical and Aerospace Engineering students to produce autonomous, target-tracking, lighter-than-air drones (blimps, to the layman) for competition. I led the Vision subteam, where I focused on real-time object detection.
                 </p>
-                <p className="text-sm italic text-gray-500 mt-2">
-                  "Life before death. Strength before weakness. Journey before destination."
+                <p>
+                  I also contributed to a published research paper on embedded artificial intelligence, which detailed the creation of an AI Ambassador for West Virginia University's Lane Department of Computer Science and Electrical Engineering (LCSEE). Feel free to check out these projects and more in my portfolio!
                 </p>
-              </li>
-              <li>
-                <h3 className="text-xl font-medium">
-                  GuiltyThree's <i>Shadow Slave</i>
-                </h3>
-                <p className="text-gray-700">
-                  For those that don't know webnovels, this is one of the best out there. I love GuiltyThree's writing style and am currently on chapter 2066. Here are my favorite arcs: Forgotten Shore, The Fall of Antarctica, and the Third Nightmare.
+                <p>
+                  Outside of programming, I love reading, gaming, and playing Ultimate Frisbee, a passion that has led me to serve as Vice President, Captain, and now President of WVU Wild, our university’s competitive Ultimate team.
                 </p>
-                <p className="text-sm italic text-gray-500 mt-2">
-                  "But here is a thing about luck. People usually speak about it as though luck is something that just happens to you. It's not. Luck is fifty percent circumstance and fifty percent your own ability to grasp it. Luck is something you have to make happen yourself."
-                </p>
-              </li>
-              <li>
-                <h3 className="text-xl font-medium">Future Reads</h3>
-                <p className="text-gray-700 italic">
-                  <i>Lord of the Mysteries</i>, the rest of the Stormlight Archive, Jeff Smith's <i>Bone</i>, and finally finishing <i>The Hobbit</i>
-                </p>
-              </li>
-            </ul>
-          </section>
+              </div>
+            </section>
+
+            {/* Skills */}
+            <section className="border-t border-slate-200 p-8">
+              <h2 className="text-3xl font-bold text-slate-800 mb-6">Skills</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-indigo-700 mb-3">Programming Languages</h3>
+                  <div>{skills.languages.map(skill => <SkillBadge key={skill} skill={skill} />)}</div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-indigo-700 mb-3">Tools & Frameworks</h3>
+                  <div>{skills.tools.map(skill => <SkillBadge key={skill} skill={skill} />)}</div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-indigo-700 mb-3">Operating Systems</h3>
+                  <div>{skills.os.map(skill => <SkillBadge key={skill} skill={skill} />)}</div>
+                </div>
+              </div>
+            </section>
+
+            {/* Reading List */}
+            <section className="border-t border-slate-200 p-8">
+              <h2 className="text-3xl font-bold text-slate-800 mb-6">Reading List</h2>
+              <ul className="space-y-8">
+                <li>
+                  <h3 className="text-xl font-semibold text-slate-900">Brandon Sanderson's <i>The Way of Kings</i></h3>
+                  <p className="text-slate-700 mt-2">
+                    I have been trying to get into the Cosmere Universe for a long time and I finally found an available copy at my local bookstore. Excited to finish this and move on through the rest of the Stormlight Archive. Kaladin is definitely the most entertaining character of the first 200 pages.
+                  </p>
+                  <p className="text-sm italic text-slate-500 mt-3 border-l-4 border-indigo-200 pl-4">
+                    "Life before death. Strength before weakness. Journey before destination."
+                  </p>
+                </li>
+                <li>
+                  <h3 className="text-xl font-semibold text-slate-900">GuiltyThree's <i>Shadow Slave</i></h3>
+                  <p className="text-slate-700 mt-2">
+                    For those that don't know webnovels, this is one of the best out there. I love GuiltyThree's writing style and am currently on chapter 2066. Here are my favorite arcs: Forgotten Shore, The Fall of Antarctica, and the Third Nightmare.
+                  </p>
+                  <p className="text-sm italic text-slate-500 mt-3 border-l-4 border-indigo-200 pl-4">
+                    "But here is a thing about luck... Luck is something you have to make happen yourself."
+                  </p>
+                </li>
+                <li>
+                  <h3 className="text-xl font-semibold text-slate-900">Future Reads</h3>
+                  <p className="text-slate-700 italic mt-2">
+                    <i>Lord of the Mysteries</i>, the rest of the Stormlight Archive, Jeff Smith's <i>Bone</i>, and finally finishing <i>The Hobbit</i>.
+                  </p>
+                </li>
+              </ul>
+            </section>
+          </div>
         </div>
       </div>
+    </div>
   );
 }
 
