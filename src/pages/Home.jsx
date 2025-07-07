@@ -8,7 +8,7 @@ function Home() {
   };
 
   const SkillBadge = ({ skill }) => (
-    <span className="inline-block bg-indigo-100 text-indigo-800 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">
+    <span className="inline-block bg-slate-200 text-slate-600 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full">
       {skill}
     </span>
   );
@@ -29,7 +29,7 @@ function Home() {
             </div>
             <div className="flex flex-col items-center">
               <h1 className="text-4xl font-bold text-slate-800">Hi, I'm Aiden Ballard</h1>
-              <p className="text-xl text-indigo-600 font-medium mt-2">Aspiring Software Engineer</p>
+              <p className="text-xl text-slate-400 font-medium mt-2">Aspiring Software Engineer</p>
             </div>
           </div>
 
@@ -56,15 +56,15 @@ function Home() {
               <h2 className="text-3xl font-bold text-slate-800 mb-6">Skills</h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-indigo-700 mb-3">Programming Languages</h3>
+                  <h3 className="text-lg font-semibold text-slate-600 mb-3">Programming Languages</h3>
                   <div>{skills.languages.map(skill => <SkillBadge key={skill} skill={skill} />)}</div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-indigo-700 mb-3">Tools & Frameworks</h3>
+                  <h3 className="text-lg font-semibold text-slate-600 mb-3">Tools & Frameworks</h3>
                   <div>{skills.tools.map(skill => <SkillBadge key={skill} skill={skill} />)}</div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-indigo-700 mb-3">Operating Systems</h3>
+                  <h3 className="text-lg font-semibold text-slate-600 mb-3">Operating Systems</h3>
                   <div>{skills.os.map(skill => <SkillBadge key={skill} skill={skill} />)}</div>
                 </div>
               </div>
@@ -79,16 +79,16 @@ function Home() {
                   <p className="text-slate-700 mt-2">
                     I have been trying to get into the Cosmere Universe for a long time and I finally found an available copy at my local bookstore. Excited to finish this and move on through the rest of the Stormlight Archive. Kaladin is definitely the most entertaining character of the first 200 pages.
                   </p>
-                  <p className="text-sm italic text-slate-500 mt-3 border-l-4 border-indigo-200 pl-4">
+                  <p className="text-sm italic text-slate-600 mt-3 border-l-4 border-indigo-200 pl-4">
                     "Life before death. Strength before weakness. Journey before destination."
                   </p>
                 </li>
                 <li>
                   <h3 className="text-xl font-semibold text-slate-900">GuiltyThree's <i>Shadow Slave</i></h3>
                   <p className="text-slate-700 mt-2">
-                    For those that don't know webnovels, this is one of the best out there. I love GuiltyThree's writing style and am currently on chapter 2066. Here are my favorite arcs: Forgotten Shore, The Fall of Antarctica, and the Third Nightmare.
+                    For those that don't know webnovels, this is one of the best out there. I love GuiltyThree's writing style and am currently on chapter 2440. Here are my favorite arcs: Forgotten Shore, The Fall of Antarctica, and the Third Nightmare.
                   </p>
-                  <p className="text-sm italic text-slate-500 mt-3 border-l-4 border-indigo-200 pl-4">
+                  <p className="text-sm italic text-slate-600 mt-3 border-l-4 border-indigo-200 pl-4">
                     "But here is a thing about luck... Luck is something you have to make happen yourself."
                   </p>
                 </li>
