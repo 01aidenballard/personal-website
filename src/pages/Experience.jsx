@@ -51,8 +51,10 @@ function Experience() {
                 <h3 className="text-xl font-semibold text-slate-900">Embedded Artificial Intelligence Intern</h3>
                 <p className="text-sm text-slate-500 italic">West Virginia University (February 2025 - Present)</p>
                 <ul className="list-disc list-inside mt-2 ml-4 space-y-2 text-slate-700">
-                  <li>Expanded dataset 7x using data augmentation for enhanced natural language processing and model training.</li>
-                  <li>Developed a Python-based speech recognition and text-to-speech interface, achieving response times under 4 seconds.</li>
+                  <li>Optimized dataset retrieval by caching vectors in a persistent file structure, reducing retrieval
+                  time on average by 84%.</li>
+                  <li>Improved machine learning model accuracy by 13% through dataset expansion (15x larger),
+                  data augmentation, and hyperparameter fine-tuning for enhanced natural language processing.</li>
                 </ul>
               </li>
               <li>
