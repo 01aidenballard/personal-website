@@ -11,14 +11,20 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 function Experience() {
   const [numPages, setNumPages] = useState(null);
+  const [isClicked, setIsClicked] = useState(false);
 
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
   };
 
+  const handleCardClick =() => {
+    setIsClicked(!isClicked);
+  }
+
+
   return (
-    <div className="min-h-screen bg-slate-50">
-      <div className="container mx-auto px-4 py-12">
+    <div className="bg-slate-50">
+      <div className="container mx-auto px-4 py-3">
         <div className="grid grid-cols-2 gap-12">
           
           {/* Left Column / PDF Viewer*/}
@@ -37,15 +43,15 @@ function Experience() {
             <a
               href="/Aiden-Ballard-Resume.pdf"
               download
-              className="mt-6 bg-blue-600 hover:bg-slate-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 ease-in-out"
+              className="mt-2 bg-blue-600 hover:bg-slate-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 ease-in-out"
             >
               Download Resume
             </a>
           </div>
 
-          {/* Right Column / Experience*/}
-          <div className="p-6 bg-white rounded-lg shadow-xl border border-slate-200">
-            <h2 className="text-3xl font-bold text-center text-slate-800 mb-6">Experience</h2>
+          {/* Right Column / Experience / Coursework*/}
+          <div className="p-2 bg-white rounded-lg shadow-xl border border-slate-200 hover:scale-102" onClick={handleCardClick} hidden={!isClicked}>
+          <h2 className="text-2xl font-bold text-slate-900 text-center">Work History</h2>
             <ul className="space-y-6">
               <li>
                 <h3 className="text-xl font-semibold text-slate-900">Embedded Artificial Intelligence Intern</h3>
@@ -88,6 +94,24 @@ function Experience() {
                   <li>Handled elevated customer complaints and trained new employees.</li>
                 </ul>
               </li>
+            </ul>
+          </div>
+          <div className="p-6 bg-white rounded-lg shadow-xl border border-slate-200 hover:scale-102" onClick={handleCardClick} hidden={isClicked}>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4 text-center">Coursework (Taken/In-Progress(IP))</h2>
+            <ul className="list-disc list-inside space-y-2 text-slate-700">
+              <li>Microprocessor Systems (IP)</li>
+              <li>Data and Computer Communications (IP)</li>
+              <li>Analysis of Algorithms (IP)</li>
+              <li>Linear Algebra (IP)</li>
+              <li>Technical Writing (IP)</li>
+              <li>File and Data Structures</li>
+              <li>Discrete Mathematics</li>
+              <li>Software Engineering</li>
+              <li>Principles of Programming Languages</li>
+              <li>Computer System Concepts</li>
+              <li>Cybersecurity Principles and Practice</li>
+              <li>Secure Software Development</li>
+              <li>Calculus I, II, and III</li>
             </ul>
           </div>
         </div>
