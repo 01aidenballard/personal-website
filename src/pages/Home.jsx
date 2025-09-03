@@ -1,5 +1,3 @@
-import headshot from "../assets/aiden_mountain.jpg";
-
 function Home() {
   const skills = {
     languages: ["Java", "Python", "C/C++", "HTML", "CSS", "JavaScript", "SQL", "VHDL"],
@@ -25,7 +23,7 @@ function Home() {
             <div className="relative">
               <img
                 className="rounded-full h-100 w-100 object-cover object-center shadow-xl ring-4 ring-white"
-                src={headshot}
+                src="/aiden_mountain.jpg"
                 alt="Headshot of Aiden Ballard at Cooper's Rock"
               />
             </div>
