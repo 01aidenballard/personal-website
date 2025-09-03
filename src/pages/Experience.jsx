@@ -11,20 +11,14 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 function Experience() {
   const [numPages, setNumPages] = useState(null);
-  const [isClicked, setIsClicked] = useState(false);
 
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
   };
 
-  const handleCardClick =() => {
-    setIsClicked(!isClicked);
-  }
-
-
   return (
-    <div className="bg-slate-50">
-      <div className="container mx-auto px-4 py-3">
+    <div className="min-h-screen bg-slate-50">
+      <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-2 gap-12">
           
           {/* Left Column / PDF Viewer*/}
@@ -43,7 +37,7 @@ function Experience() {
             <a
               href="/Aiden-Ballard-Resume.pdf"
               download
-              className="mt-2 bg-blue-600 hover:bg-slate-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 ease-in-out"
+              className="mt-6 bg-blue-600 hover:bg-slate-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 ease-in-out"
             >
               Download Resume
             </a>

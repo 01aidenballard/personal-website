@@ -5,6 +5,7 @@ function Projects() {
   
   return (
     <div className="p-8">
+      <h2 className="text-center text-2xl font-semibold mb-4">Projects</h2>
       <ul className= "flex grid grid-cols-3 place-items-center">
         <ProjectCard 
           project={{ 
