@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function ProjectCard({ project }) {
   
     const [isClicked, setIsClicked] = useState(false);
+    const [isVideo, setIsVideo] = useState(false);
 
     const handleCardClick = () => {
         setIsClicked(!isClicked);
@@ -47,7 +48,7 @@ function ProjectCard({ project }) {
                 </div>
             </div>
         </>
-    );
+        );
 }
 
 export default ProjectCard;
