@@ -50,7 +50,7 @@ function Experience() {
           </div>
 
           {/* Right Column / Experience / Coursework*/}
-          <div className="p-2 bg-white rounded-lg shadow-xl border border-slate-200 hover:scale-102" onClick={handleCardClick} hidden={!isClicked}>
+          <div className="p-2 bg-white rounded-lg shadow-xl border border-slate-200 hover:scale-102" onClick={handleCardClick} hidden={isClicked}>
           <h2 className="text-2xl font-bold text-slate-900 text-center">Work History</h2>
             <ul className="space-y-6">
               <li>
@@ -96,7 +96,7 @@ function Experience() {
               </li>
             </ul>
           </div>
-          <div className="p-6 bg-white rounded-lg shadow-xl border border-slate-200 hover:scale-102" onClick={handleCardClick} hidden={isClicked}>
+          <div className="p-6 bg-white rounded-lg shadow-xl border border-slate-200 hover:scale-102" onClick={handleCardClick} hidden={!isClicked}>
             <h2 className="text-2xl font-bold text-slate-900 mb-4 text-center">Coursework (Taken/In-Progress(IP))</h2>
             <ul className="list-disc list-inside space-y-2 text-slate-700">
               <li>Microprocessor Systems (IP)</li>

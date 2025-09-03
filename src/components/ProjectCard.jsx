@@ -13,6 +13,13 @@ function ProjectCard({ project }) {
         setIsVideo(!!project.video); 
       }, [project]);
 
+
+    const TechBadge = ({ skill }) => (
+    <span className="inline-block bg-slate-200 text-slate-600 text-sm font-medium mt-2 mr-2 mb-2 px-3 py-1 rounded-full">
+        {skill}
+    </span>
+    );
+
         return (
         <>
             <div className="inline-block border border-slate-300 p-4 m-4 rounded-md shadow-md w-100 h-150 cursor-pointer transition duration-100 hover:scale-110" 
@@ -24,15 +31,20 @@ function ProjectCard({ project }) {
                 <div className="bg-white border border-slate-300 p-6 rounded-md shadow-md w-300 max-w-[60%] h-300 max-h-[60%] transition duration-300 ease-in-out"
                 onClick={(e) => e.stopPropagation()} >
                     <h3 className="text-2xl font-bold text-slate-900">{project.title}</h3>
-                    <p className="text-slate-700 mt-4 text.center">{project.longDescription}</p>
-                    {isVideo ? (
-                        <video width="320" height="240" controls>
-                        <source src={project.mediaLink} type="video/mov" />
-                        Your browser does not support the video tag.
-                        </video>
-                    ) : (
-                        <img src={project.mediaLink} alt={project.title} />
-                    )}
+                    <div>{project.techStack.map(skill => <TechBadge key={skill} skill={skill} />)}</div>
+                    <div className="grid grid-cols-2">
+                        <p className="text-slate-700 mt-4">{project.longDescription}</p>
+                        <div className="flex justify-center items-center">
+                            {isVideo ? (
+                                <video className="ml-2" width="480" height="360" controls preload="auto">
+                                <source src={project.mediaLink} type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                            ) : (
+                                <img className="ml-2" src={project.mediaLink} alt={project.title} width="480" height ="360" />
+                            )}
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
