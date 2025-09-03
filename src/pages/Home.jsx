@@ -13,13 +13,15 @@ function Home() {
     </span>
   );
 
+  const lastUpdatedDate = "2 September 2025";
+
   return (
     <div className="min-h-screen bg-slate-50">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
 
           {/* Left Column / Intro */}
-          <div className="lg:col-span-2 flex flex-col items-center text-center space-y-6">
+          <div className="lg:col-span-2 flex flex-col items-center text-center space-y-6 lg:sticky lg:top-31">
             <div className="relative">
               <img
                 className="rounded-full h-100 w-100 object-cover object-center shadow-xl ring-4 ring-white"
@@ -30,6 +32,7 @@ function Home() {
             <div className="flex flex-col items-center">
               <h1 className="text-4xl font-bold text-slate-800">Hi, I'm Aiden Ballard</h1>
               <p className="text-xl text-slate-400 font-medium mt-2">Aspiring Software Engineer</p>
+              <p className="text-xs mt-2 text-slate-400 ">Last Updated: {lastUpdatedDate}</p>
             </div>
           </div>
 

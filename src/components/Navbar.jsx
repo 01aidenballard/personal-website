@@ -2,7 +2,11 @@ import { Link, NavLink } from 'react-router-dom';
 import linkedin from '../assets/linkedin.png'; 
 import github from '../assets/icons8-github.svg';
 
+
+
 function Navbar() {
+
+
   const activeLinkStyle = {
     fontWeight: '600',
     color: '#94A3B8', // slate-400

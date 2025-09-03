@@ -32,10 +32,10 @@ function Projects() {
           media: "/snowhere.png",
           cover: "/snowhere.png" }} />
           <ProjectCard project={{
-            title: "AI Ambassador",
+            title: "AI Ambassador (Work in Progress)",
             briefDescription: "An embedded AI assistant for the Lane Department of Computer Science and Electrical Engineering at WVU.",
             techStack: ["Python", "Raspberry Pi 4B", "Hugging Face"],
-            longDescription: "The AI Ambassador is the project I have worked on as an Embedded Systems Intern in the department. Running a Raspberry Pi 4B, I helped build and test multiple AI/ML methods (i.e traditional machine learning, finetuned transformers, and small-parameter large language models) to find the most efficient and accurate method to run on the Pi. I specifically worked on the dataset and programming side of the project, where I assisted the leading graduate student in his research. Now, I've been tasked with carrying the project on and improving the conversational function of the robot.",
+            longDescription: "",
             video: false,
             media: "",
             cover: ""
