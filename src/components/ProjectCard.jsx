@@ -46,9 +46,8 @@ function ProjectCard({ project }) {
                     </div>
                 </div>
             </div>
-        </div>
-        );
-    }
+        </>
+    );
 }
 
 export default ProjectCard;
