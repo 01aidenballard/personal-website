@@ -31,7 +31,7 @@ function Experience() {
           <div className="flex flex-col items-center">
             <div className="w-135 max-w-xl border border-slate-200 rounded-lg shadow-xl overflow-hidden bg-white">
               <Document
-                file="src/assets/Aiden-Ballard-Resume.pdf"
+                file="/Aiden-Ballard-Resume.pdf"
                 onLoadSuccess={onDocumentLoadSuccess}
                 onLoadError={console.error}
                 loading={<p className="text-center p-6 text-slate-500">Loading PDF...</p>}
