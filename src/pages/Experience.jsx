@@ -40,7 +40,7 @@ function Experience() {
           {/* Left Column / PDF Viewer*/}
           <div className="flex flex-col items-center">
             <div className="w-135 max-w-xl border border-slate-200 rounded-lg shadow-xl overflow-hidden bg-white">
-              <iframe src="/Aiden-Ballard-Resume.pdf" height="500" width="125" />
+              <iframe className="border-none" src="/Aiden-Ballard-Resume.pdf#toolbar=0&navpanes=0&scrollbar=0" height="675" width="100%" />
             </div>
             <a
               href="/Aiden-Ballard-Resume.pdf"
