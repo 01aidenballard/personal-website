@@ -4,7 +4,7 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 import pdfWorker from "pdfjs-dist/build/pdf.worker.min.mjs?worker";
 
-pdfjs.GlobalWorkerOptions.workerSrc = pdfWorker;
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;;
 
 // // Setup for the PDF.js worker
 // pdfjs.GlobalWorkerOptions.workerSrc = new URL(
