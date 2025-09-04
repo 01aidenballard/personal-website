@@ -2,15 +2,22 @@ import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
-import pdfWorker from "pdfjs-dist/build/pdf.worker.min.mjs?worker";
-
-pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;;
 
 // // Setup for the PDF.js worker
 // pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 //   'pdfjs-dist/build/pdf.worker.min.mjs',
 //   import.meta.url,
 // ).toString();
+
+{/* <Document
+                file="/Aiden-Ballard-Resume.pdf"
+                onLoadSuccess={onDocumentLoadSuccess}
+                onLoadError={console.error}
+                loading={<p className="text-center p-6 text-slate-500">Loading PDF...</p>}
+                error={<p className="text-center p-6 text-red-500">Failed to load PDF.</p>}
+              >
+                <Page pageNumber={1} width={550} />
+              </Document> */}
 
 function Experience() {
   const [numPages, setNumPages] = useState(null);
@@ -33,15 +40,7 @@ function Experience() {
           {/* Left Column / PDF Viewer*/}
           <div className="flex flex-col items-center">
             <div className="w-135 max-w-xl border border-slate-200 rounded-lg shadow-xl overflow-hidden bg-white">
-              <Document
-                file="/Aiden-Ballard-Resume.pdf"
-                onLoadSuccess={onDocumentLoadSuccess}
-                onLoadError={console.error}
-                loading={<p className="text-center p-6 text-slate-500">Loading PDF...</p>}
-                error={<p className="text-center p-6 text-red-500">Failed to load PDF.</p>}
-              >
-                <Page pageNumber={1} width={550} />
-              </Document>
+              <iframe src="/Aiden-Ballard-Resume.pdf" />
             </div>
             <a
               href="/Aiden-Ballard-Resume.pdf"
