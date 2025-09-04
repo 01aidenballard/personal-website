@@ -1,0 +1,7 @@
+{
+    "rewrites": [
+      { "source": "/experience", "destination": "/src/pages/Expereince.jsx" },
+      { "source": "/projects", "destination": "/src/pages/Projects.jsx" },
+      { "source": "/contact", "destination": "/src/pages/Contact.jsx" }
+    ]
+  }
